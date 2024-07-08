@@ -1,0 +1,22 @@
+/**
+* @license
+*
+* Font Family: Supreme
+* Designed by: Jérémie Hornus, Ilya Naumoff
+* URL: https://www.fontshare.com/fonts/supreme
+* © 2024 Indian Type Foundry
+*
+* Supreme Regular 
+
+*
+*/
+@font-face {
+  font-family: 'Supreme-Regular';
+  src: url('../fonts/Supreme-Regular.woff2') format('woff2'),
+       url('../fonts/Supreme-Regular.woff') format('woff'),
+       url('../fonts/Supreme-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+

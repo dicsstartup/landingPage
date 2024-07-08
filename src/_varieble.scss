@@ -1,0 +1,36 @@
+$font-family-sans-serif:
+  // Primera opción: "Supreme"
+  "Supreme-Regular",
+  // Fuentes específicas según plataforma y sistema operativo
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  // Fuentes para emojis
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+
+$body-bg-dark: #101418;
+$body-color-dark: #101418;
+$body-tertiary-bg-dark:#005666;
+
+$dark:#101418;
+$light:#f3f7f8;
+$primary:#00a06f;
+$secondary:#99E018;
+
+$btn-color:$light;
+
+$font-size-base: 1.5rem;
+
+$h1-font-size: $font-size-base * 3.5;
+
+
+$headings-font-family: 'Technor-Semibold', sans-serif;
+
+
+$btn-font-family:     'Technor-Semibold', sans-serif ;
+$enable-negative-margins: true;

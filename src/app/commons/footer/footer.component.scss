@@ -1,0 +1,24 @@
+.logo {
+    width: 50px;
+}
+
+.footer {
+    background-color: rgba(var(--bs-tertiary-bg-rgb), 0.1);
+    width: 100%;
+    height: auto;
+}
+
+a{
+   img{
+    width:2.5rem;
+   }
+   .material-symbols-outlined{
+    font-size: 2.5rem;
+   }
+}
+
+.links{
+ a{
+    font-size: 1rem;
+ }
+}

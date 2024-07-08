@@ -1,0 +1,21 @@
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title text-light" id="offcanvas-basic-title">Profile update</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+	</div>
+</ng-template>
+
+<div class="w-100 bg-body">
+	<div class="container d-flex justify-content-between">
+		<a href="/" class="btn d-flex flex-row justify-content-start align-items-center ">
+			<img src="../../../assets/icons/logo.svg" alt="logo">
+			<p class="text-light fs-4 ms-1">DICSSTARTUP</p>
+		</a>
+		<button class="btn btn-dark ml-auto p-1" (click)="open(content)">
+			<span class="material-symbols-outlined">drag_handle</span>
+		</button>
+	</div>
+</div>
+

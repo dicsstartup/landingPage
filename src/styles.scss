@@ -1,0 +1,17 @@
+@import '/src/assets/fonts/Supreme/Fonts/WEB/css/supreme.css';
+@import '/src/assets/fonts/Technor/Fonts/WEB/css/technor.css';
+@import '/src/varieble';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+  margin: 0;
+}
+ 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

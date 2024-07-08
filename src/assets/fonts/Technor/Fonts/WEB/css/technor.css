@@ -1,0 +1,22 @@
+/**
+* @license
+*
+* Font Family: Technor
+* Designed by: Jean-Baptiste Morizot
+* URL: https://www.fontshare.com/fonts/technor
+* © 2024 Indian Type Foundry
+*
+* Technor Semibold 
+
+*
+*/
+@font-face {
+  font-family: 'Technor-Semibold';
+  src: url('../fonts/Technor-Semibold.woff2') format('woff2'),
+       url('../fonts/Technor-Semibold.woff') format('woff'),
+       url('../fonts/Technor-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
