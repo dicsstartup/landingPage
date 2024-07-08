@@ -1,0 +1,65 @@
+.circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+    background-color: darken(#99E018,6%);
+}
+
+.btn:active {
+    opacity: 0.3;
+}
+
+.rounded-circle
+{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+@media (min-width: 1024px) {
+    .circle{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+.carrusel{
+    width: auto;
+    height: auto;
+}
+
+.proyecto{
+        height: auto;
+    img{
+        width: 250px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    @media (min-width: 576px) {
+        img{
+            width: 350px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        img{
+            width: 400px;
+        }
+    }
+  
+}
+
+
+.carrusel {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos móviles */
+
+    @media (min-width: 768px) {
+        overflow-x: hidden;     }
+  }
+  
+
+
+
+

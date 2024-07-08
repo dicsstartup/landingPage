@@ -1,0 +1,47 @@
+.btn:active {
+    opacity: 0.3;
+}
+
+.rounded-circle
+{
+    width: 3rem;
+    height: 3rem;
+}
+
+.link{
+    width: 75%;
+    transition: transform 0.3s ease;
+}
+
+.link:hover{
+    transform: scale(1.1);    
+}
+
+
+
+.btn , link{
+    --bs-btn-padding-x:0px;
+    --bs-btn-padding-y:0px;
+    text-align: start;
+
+}
+
+@media (max-width: 768px) {
+   
+    .link{
+        width: 90%;
+    }
+    .rounded-circle
+{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+}
+
+@media (min-width: 1490px) {
+   
+    .link{
+        width: 50%;
+    }
+}
