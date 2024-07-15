@@ -13,6 +13,7 @@ import { ViewProjectsComponent } from './home/components/view-projects/view-proj
 import { TecnologiasComponent } from './commons/tecnologias/tecnologias.component';
 import { TermsComponent } from './about/terms/terms.component';
 import { PoliticaPrivacidadComponent } from './about/politica-privacidad/politica-privacidad.component';
+import { HowWorkComponent } from './about/how-work/how-work.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PoliticaPrivacidadComponent } from './about/politica-privacidad/politic
     TecnologiasComponent,
     TermsComponent,
     PoliticaPrivacidadComponent,
+    HowWorkComponent,
     
   ],
   imports: [

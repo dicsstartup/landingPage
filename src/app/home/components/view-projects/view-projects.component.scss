@@ -53,10 +53,7 @@
 
 .carrusel {
     display: flex;
-    overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos móviles */
-
-    @media (min-width: 768px) {
-        overflow-x: hidden;     }
+    overflow-x: hidden; 
   }
   
 
