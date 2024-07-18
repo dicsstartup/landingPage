@@ -40,7 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-src/environments/environment.development.ts
-src/environments/environment.ts
-/.firebase
-.editorconfig
+.firebase/hosting.cHVibGlj.cache
+.firebase/hosting.ZGlzdFxsb2FuZGluZy1wYWdl.cache

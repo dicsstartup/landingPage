@@ -21,9 +21,9 @@
 
     <div #scrollable class="carrusel my-sm-4 my-3 ms-sm-4 ms-1">
             <a *ngFor="let proyecto of proyectos; let i = index " [href]="proyecto.link" class="btn btn-outline-light text-dark proyecto fixed-element{{i}} me-3 p-1">
-              <img class="object-fit-cover" [src]="proyecto.imagen" alt="Proyecto {{proyecto.titulo}}">
+              <img class="object-fit-cover" [src]="proyecto.img" alt="Proyecto {{proyecto.name}}">
               <div class="bg-light px-3 py-2 d-inline-flex justify-content-between w-100">
-                <h5 class="mb-0">{{ proyecto.titulo }}</h5>
+                <h5 class="mb-0">{{ proyecto.name }}</h5>
                 <div class="rounded-circle border border-2 border-dark position-relative mx-1 mx-sm-2">
                     <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-dark fs-6">arrow_outward</span>
                 </div> 

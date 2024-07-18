@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+  constructor() {
+  }
   p2 = false;
   p3 = false;
   p4 = false;

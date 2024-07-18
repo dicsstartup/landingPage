@@ -14,6 +14,7 @@ import { TecnologiasComponent } from './commons/tecnologias/tecnologias.componen
 import { TermsComponent } from './about/terms/terms.component';
 import { PoliticaPrivacidadComponent } from './about/politica-privacidad/politica-privacidad.component';
 import { HowWorkComponent } from './about/how-work/how-work.component';
+import { PageProjectComponent } from './proyect/page-project/page-project.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HowWorkComponent } from './about/how-work/how-work.component';
     TermsComponent,
     PoliticaPrivacidadComponent,
     HowWorkComponent,
+    PageProjectComponent,
     
   ],
   imports: [
