@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tecnologias',
@@ -6,21 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./tecnologias.component.scss']
 })
 export class TecnologiasComponent {
+  @Input() list : {name:string,src:string}[]=[];
 
-  list = [
-    { name: 'Firebase', src: '../assets/imgs/tecnologias/firebase.svg'},
-    { name: 'Android Studio', src: '../assets/imgs/tecnologias/android_studio.svg'},
-    { name: 'Maven', src: '../assets/imgs/tecnologias/maven.svg'},
-    { name: 'Java', src: '../assets/imgs/tecnologias/java.svg'},
-    { name: 'HTML', src: '../assets/imgs/tecnologias/html5.svg'},
-    { name: 'CSS', src: '../assets/imgs/tecnologias/css.svg'},
-    { name: 'Angular', src: '../assets/imgs/tecnologias/angular.svg'},
-    { name: 'Firebase', src: '../assets/imgs/tecnologias/firebase.svg'},
-    { name: 'Android Studio', src: '../assets/imgs/tecnologias/android_studio.svg'},
-    { name: 'Maven', src: '../assets/imgs/tecnologias/maven.svg'},
-    { name: 'Java', src: '../assets/imgs/tecnologias/java.svg'},
-    { name: 'HTML', src: '../assets/imgs/tecnologias/html5.svg'},
-    { name: 'CSS', src: '../assets/imgs/tecnologias/css.svg'},
-    { name: 'Angular', src: '../assets/imgs/tecnologias/angular.svg'}
-  ];
+  constructor() { }
+
 }
