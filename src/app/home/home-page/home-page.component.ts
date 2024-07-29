@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+  constructor() {
+  }
   p2 = false;
   p3 = false;
   p4 = false;
@@ -13,9 +15,7 @@ export class HomePageComponent {
   link1 = {texto:'Únete a Nuestra Comunidad',link:'#' , bg:'primary',tx:'light' , ms:'-90px'};
   link2 = {texto:'Contribuye Ahora',link:'#' , bg:'light' ,tx:'dark',w:'90%'};
   link3 = {texto:'Explora Proyectos',link:'#' , bg:'body-tertiary' ,tx:'light',w:'85%'};
-
-
-
+  
   dWords: string[] = ['evOps','esarrollando'];
   iWords: string[] = ['deas'];
   cWords: string[] = ['reando'];

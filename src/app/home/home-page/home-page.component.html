@@ -1,18 +1,19 @@
-<div class="container d-flex position-relative layer">
-    <div class="z-1">
-        <p class="parrafo text-light fs-3 ms-sm-3 ms-lg-5">Únete a Dicsstartup y colabora en proyectos innovadores de
-            código abierto. ¡Todos son
-            bienvenidos!</p>
-        <div class="botonera ms-sm-3 ms-lg-5">
-            <a href="/comoFunciona" class="btn btn-primary text-light">Como funciona</a>
-            <button type="button" class="btn btn-outline-secondary ms-2">Unete!</button>
+<div class="container-fluid px-3">
+    <div class="d-flex position-relative layer">
+        <div class="z-1">
+            <p class="parrafo text-light fs-3 ms-sm-3 ms-lg-5">Únete a Dicsstartup y colabora en proyectos innovadores de
+                código abierto. ¡Todos son
+                bienvenidos!</p>
+            <div class="botonera ms-sm-3 ms-lg-5">
+                <a routerLink="/comoFunciona" class="btn btn-primary text-light">Como funciona</a>
+                <button type="button" class="btn btn-outline-secondary ms-2">Unete!</button>
+            </div>
+        </div>
+        <div class="flex-shrink-1 position-absolute end-0 imagen ">
+            <img src="../assets/imgs/fondo.png" alt="imagen decoracion" class="img-fluid w-100 h-100 object-fit-cover ">
         </div>
     </div>
-    <div class="flex-shrink-1 position-absolute end-0 imagen ">
-        <img src="../assets/imgs/fondo.png" alt="imagen decoracion" class="img-fluid w-100 h-100 object-fit-cover ">
-    </div>
 </div>
-
 <div class="container titles">
     <div class="ms-md-3 ms-lg-5 letters">
         <p class="h1 text-light mb-n3"><span class="text-dark hidden">i</span> <span
@@ -32,12 +33,12 @@
 
 <app-view-projects class="my-5"></app-view-projects>
 
-<div class="container d-flex flex-column justify-content-center pt-1 pb-5">
+<div class="container-fluid px-md-5 d-flex flex-column justify-content-center pt-1 pb-5">
     <p class="text-secondary text-center" >Tecnologías que usamos en nuestros proyectos.</p>
-    <app-tecnologias class="py-2"></app-tecnologias>
+    <app-tecnologias [all]="true" class="py-2"></app-tecnologias>
 </div>
 
-<div class="container pt-3 pb-5">
+<div class="container-fluid px-3 pt-3 pb-5">
     <p class="h1 text-light py-4 fs-1">Como funciona</p>
     <div class="d-flex flex-column mt-4">
         <div class="primary-web rounded-4 p-3 align-self-end">
@@ -79,11 +80,11 @@
 </div>
 
 <div class=" mt-5">
-    <div class="container  py-2 ">
+    <div class="container-fluid px-3  py-2 ">
         <p class="h1 text-light fs-1 text-end me-1 my-2">Nuestras Herramientas y Servicios</p>
     </div>
     <div class="bg-body ">
-        <div class="container p-4">
+        <div class="container-fluid p-4">
             <p class="h4 text-secondary mt-4 ">Repositorios de Código Abierto</p>
             <div class="rep">
                 <p class="text-light fs-5 ">Accede y contribuye a una variedad de proyectos.
@@ -98,7 +99,7 @@
     </div>
 
   <div class="com_act">
-        <div class="container p-4">
+        <div class="container-fluid p-4">
             <p class="h4 text-primary mt-4  text-end">Comunidad activa</p>
                 <p class="text-light fs-5 text-end ">Únete a foros y grupos de discusión para compartir ideas, obtener ayuda, colaborar en tiempo real, y conectar con otros desarrolladores apasionados. Participa en debates, resuelve desafíos técnicos y forma parte de una comunidad vibrante y solidaria.</p>
                     <div class="d-inline-flex  justify-content-end mt-2 w-100 mb-4">

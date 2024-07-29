@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { TimerService } from 'src/app/services/timer.service';
+import { Proyect } from 'src/app/models/ProjectList';
+import { ProyectoService } from 'src/app/services/realtimeDB/proyecto/proyecto.service';
+import { TimerService } from 'src/app/services/timer/timer.service';
 
 @Component({
   selector: 'app-view-projects',
@@ -8,41 +10,35 @@ import { TimerService } from 'src/app/services/timer.service';
 })
 export class ViewProjectsComponent {
 
-  proyectos = [
+  isExecuting: boolean = false;
+
+  proyectos: Proyect[] = [
     {
-      imagen: '../assets/imgs/Spot_imagen.png',
-      titulo: 'SPOT',
-      link: 'Descripción del Proyecto 1'
-    },
-    {
-      imagen: '../assets/imgs/DevHelper.png',
-      titulo: 'DevHelper',
-      link: ''
-    },
-    {
-      imagen: '../assets/imgs/DevFormFX.png',
-      titulo: 'DevFormFx',
-      link: 'Descripción del Proyecto 3'
-    },
-    {
-      imagen: '../assets/imgs/unete.png',
-      titulo: 'Contactanos',
+      img: '../assets/imgs/unete.png',
+      name: 'Contactanos',
       link: 'Descripción del Proyecto 3'
     }
   ];
-  visibleItems:[] = [];
+  visibleItems: [] = [];
 
   @ViewChild('scrollable') scrollable!: ElementRef;
 
   currentView = 0;
-  currentWidth=0;
+  currentWidth = 0;
 
 
-  constructor(private timerService: TimerService) {}
+  constructor(private timerService: TimerService,
+    private proyectService: ProyectoService) {
+
+  }
 
   ngOnInit() {
+    this.proyectService.getAllProyects().then((data) => {
+      this.proyectos = [...data, ...this.proyectos];
+    }).catch((err) => {
+      console.error(" " + err);
+    });
     this.startTimer();
-    
   }
 
   ngOnDestroy() {
@@ -51,9 +47,7 @@ export class ViewProjectsComponent {
 
   startTimer() {
     const myCallback = () => {
-      this.currentView = (this.currentView + 1) % this.proyectos.length;
-      this.currentWidth = this.currentView > 0 ? this.scrollable.nativeElement.querySelector('.fixed-element' + this.currentView).scrollWidth*(this.currentView):0;
-      this.smoothScroll(this.currentWidth,1000);
+      this.next();
     };
     this.timerService.start(myCallback, 4000);
   }
@@ -63,10 +57,13 @@ export class ViewProjectsComponent {
   }
 
 
-  next() {
+  next(): void {
+    if (this.isExecuting) {
+      return;
+    }
     this.currentView = (this.currentView + 1) % this.proyectos.length;
-    this.currentWidth = this.currentView > 0 ? this.scrollable.nativeElement.querySelector('.fixed-element' + this.currentView).scrollWidth*(this.currentView):0;
-    this.smoothScroll(this.currentWidth,1000);
+    this.currentWidth = this.currentView > 0 ? this.scrollable.nativeElement.querySelector('.fixed-element' + this.currentView).scrollWidth * (this.currentView) : 0;
+    this.smoothScroll(this.currentWidth, 500);
     this.resetTimer();
   }
 
@@ -74,6 +71,8 @@ export class ViewProjectsComponent {
     this.currentView = (this.currentView - 1 + this.proyectos.length) % this.proyectos.length;
     this.adjustElementPosition();
     this.resetTimer();
+    this.isExecuting = true;
+
   }
 
   adjustElementPosition() {
@@ -104,6 +103,4 @@ export class ViewProjectsComponent {
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
   }
-
-  
 }

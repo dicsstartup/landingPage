@@ -6,10 +6,9 @@
         display: flex;
         animation: scroll 48s linear infinite;
         -webkit-animation: scroll 48s linear infinite;
-        width: calc(200px * 14);
-
+        height: 2.75rem;
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 
