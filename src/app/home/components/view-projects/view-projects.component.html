@@ -1,34 +1,35 @@
-<div class="d-flex flex-column border border-secondary rounded-3 container mb-5 p-3">
-    <div class="d-inline-flex align-self-end">
-        <div class="circle ms-1"></div>
-        <div class="circle ms-1"></div>
-        <div class="circle ms-1"></div>
-    </div>
-    <div class="d-flex flex-column">
-        <p class="h1 text-secondary ms-sm-4 ms-0 py-sm-4 py-2"> Proyectos</p>
-        <div class="d-inline-flex align-self-end  pe-sm-5 ">
-            <button type="button" (click)="prev()" class="btn btn-outline-secondary rounded-pill position-relative py-3 px-5">
-                <span
-                    class="material-symbols-outlined position-absolute top-50 start-50 translate-middle fs-3">arrow_left_alt</span>
-            </button>
-            <button (click)="next()"type="button"
-                class="btn btn-outline-secondary rounded-pill position-relative ms-2 me-sm-3 me-3 py-3 px-5 ">
-                <span
-                    class="material-symbols-outlined position-absolute top-50 start-50 translate-middle fs-3">arrow_right_alt</span>
-            </button>
+<div class="container-fluid px-3">
+    <div class="d-flex flex-column border border-secondary rounded-3  mb-5 p-3">
+        <div class="d-inline-flex align-self-end">
+            <div class="circle ms-1"></div>
+            <div class="circle ms-1"></div>
+            <div class="circle ms-1"></div>
+        </div>
+        <div class="d-flex flex-column">
+            <p class="h1 text-secondary ms-sm-4 ms-0 py-sm-4 py-2"> Proyectos</p>
+            <div class="d-inline-flex align-self-end  pe-sm-5 ">
+                <button type="button" (click)="prev()" class="btn btn-outline-secondary rounded-pill position-relative py-3 px-5">
+                    <span
+                        class="material-symbols-outlined position-absolute top-50 start-50 translate-middle fs-3">arrow_left_alt</span>
+                </button>
+                <button (click)="next()"type="button"
+                    class="btn btn-outline-secondary rounded-pill position-relative ms-2 me-sm-3 me-3 py-3 px-5 ">
+                    <span
+                        class="material-symbols-outlined position-absolute top-50 start-50 translate-middle fs-3">arrow_right_alt</span>
+                </button>
+            </div>
+        </div>
+    
+        <div #scrollable class="carrusel my-sm-4 my-3 ms-sm-4 ms-1">
+                <a *ngFor="let proyecto of proyectos; let i = index " (click)="navegation(proyecto.link)" class="btn btn-outline-light text-dark proyecto fixed-element{{i}} me-3 p-1">
+                  <img class="object-fit-cover" [src]="proyecto.img" alt="Proyecto {{proyecto.name}}">
+                  <div class="bg-light px-3 py-2 d-inline-flex justify-content-between w-100">
+                    <h5 class="mb-0">{{ proyecto.name }}</h5>
+                    <div class="rounded-circle border border-2 border-dark position-relative mx-1 mx-sm-2">
+                        <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-dark fs-6">arrow_outward</span>
+                    </div> 
+                  </div>
+                </a>
         </div>
     </div>
-
-    <div #scrollable class="carrusel my-sm-4 my-3 ms-sm-4 ms-1">
-            <a *ngFor="let proyecto of proyectos; let i = index " [href]="proyecto.link" class="btn btn-outline-light text-dark proyecto fixed-element{{i}} me-3 p-1">
-              <img class="object-fit-cover" [src]="proyecto.img" alt="Proyecto {{proyecto.name}}">
-              <div class="bg-light px-3 py-2 d-inline-flex justify-content-between w-100">
-                <h5 class="mb-0">{{ proyecto.name }}</h5>
-                <div class="rounded-circle border border-2 border-dark position-relative mx-1 mx-sm-2">
-                    <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle text-dark fs-6">arrow_outward</span>
-                </div> 
-              </div>
-            </a>
-    </div>
-
 </div>

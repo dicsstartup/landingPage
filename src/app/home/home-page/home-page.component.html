@@ -5,7 +5,7 @@
                 código abierto. ¡Todos son
                 bienvenidos!</p>
             <div class="botonera ms-sm-3 ms-lg-5">
-                <a href="/comoFunciona" class="btn btn-primary text-light">Como funciona</a>
+                <a routerLink="/comoFunciona" class="btn btn-primary text-light">Como funciona</a>
                 <button type="button" class="btn btn-outline-secondary ms-2">Unete!</button>
             </div>
         </div>
@@ -35,7 +35,7 @@
 
 <div class="container-fluid px-md-5 d-flex flex-column justify-content-center pt-1 pb-5">
     <p class="text-secondary text-center" >Tecnologías que usamos en nuestros proyectos.</p>
-    <app-tecnologias [list]="list_tec" class="py-2"></app-tecnologias>
+    <app-tecnologias [all]="true" class="py-2"></app-tecnologias>
 </div>
 
 <div class="container-fluid px-3 pt-3 pb-5">
