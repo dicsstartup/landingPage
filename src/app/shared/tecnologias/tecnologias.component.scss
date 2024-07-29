@@ -1,0 +1,25 @@
+.slider {
+
+    overflow: hidden;
+
+    .slide-track {
+        display: flex;
+        animation: scroll 48s linear infinite;
+        -webkit-animation: scroll 48s linear infinite;
+        height: 2.75rem;
+        img {
+            height: 100%;
+        }
+    }
+
+}
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
