@@ -1,0 +1,12 @@
+<h3 class="text-center text-secondary  ">Objetivos</h3>
+<div class="container-fluid px-3 py-5 mb-5  g-lg-3 ">
+    <div class="row justify-content-center row-cols-3  g-3">
+        <div *ngFor="let objetivo of objetivos; let i = index" class="px-3 py-5 col-12 col-sm-5 col-xl-3 d-flex align-items-center"
+            [ngClass]="{'border border-secondary mt-xl-5 mb-xl-n5  ': i % 2 === 0, 'bg-secondary mx-4': i % 2 !== 0,}">
+            <p class="text-secondary text-center"
+                [ngClass]="{'text-secondary': i % 2 === 0, 'text-dark': i % 2 !== 0,}">
+                {{objetivo}}
+            </p>
+        </div>
+    </div>
+</div>

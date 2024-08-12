@@ -1,0 +1,72 @@
+<div class="buscador px-3 p-1">
+  <div class="row justify-content-end">
+    <div class="col-sm-6 col-lg-5">
+      <div class="input-group mb-1">
+        <div class="form-floating">
+          <input [(ngModel)]="buscardor" type="text" class="form-control" id="buscadorInput" placeholder="Buscador">
+          <label for="buscadorInput">Buscador</label>
+        </div>
+        <button class="btn btn-outline-secondary d-flex align-items-center" type="button" id="button-addon1">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="filtro d-flex flex-row-reverse justify-content-between">
+    <button class=" btn d-flex align-items-center" (click)=" openFilter()"> Filtros 
+      <span class="material-symbols-outlined ms-2">
+        tune
+      </span> 
+    </button>
+    <div class="d-flex align-items-center filtros">
+      <div class="badge text-bg-secondary me-1 d-flex align-items-center pe-1" *ngFor="let item of filtrosP"
+        (click)="onClickP(item)">
+        {{item.label}}
+        <span class="material-symbols-outlined ps-1 p-0" style="font-size: 0.75rem;">close</span>
+      </div>
+      <div class="badge text-bg-secondary me-1 d-flex align-items-center pe-1" *ngFor="let item of filtrosT"
+        (click)="onClickT(item)">
+        {{item.label}}
+        <span class="material-symbols-outlined ps-1 p-0" style="font-size: 0.75rem;">close</span>
+      </div>
+    </div>
+  </div>
+  <div class="bg-secondary w-100 m-1" style="height: 1px;"></div>
+</div>
+<div class="px-3 px-lg-5 mt-1 mb-4 container">
+  <div class="py-5 m-5" *ngIf="filteredList.length == 0">
+    <h3 class="text-white-50 text-center">No hay proyectos</h3>
+  </div>
+  <div class="lista row gy-2 gx-2">
+    <div *ngFor="let p of filteredList" (click)="navegation(p.link)" class="col-lg-4 col-sm-6 col-12 parent">
+      <a class="d-flex flex-column w-100 h-100 p-3 item">
+        <div class="header d-flex align-items-center justify-content-between">
+          <div class="d-flex flex-row">
+            <span *ngFor="let plat of p.plataformas" class="material-symbols-outlined text-secondary">
+              {{getPlatformIcon(plat)}}
+            </span>
+          </div>
+          <div class="estatus d-flex align-items-center">
+            <p class="m-0">{{p.estado}}</p>
+            <div class="circle bg-secondary ms-1"></div>
+          </div>
+        </div>
+        <div class="w-100">
+          <img [src]="p.img" alt="logo de {{p.name}}">
+        </div>
+        <div class="pt-2">
+          <h3>{{p.name}}</h3>
+          <p class="mb-1">{{p.description}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-row">
+              <img class="icon" *ngFor="let icon of p.tecnologias" src="{{this.getTechIcon(icon)}}" alt="{{icon}}">
+            </div>
+            <div class="boton d-flex align-items-center p-1 justify-content-center">
+              <span class="material-symbols-outlined" style="font-size: 1.5rem;">arrow_outward</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
