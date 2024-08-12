@@ -1,0 +1,124 @@
+.buscador {
+    font-size: 1rem;
+}
+
+.filtro {
+    .btn {
+        font-size: 1rem;
+
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    .badge {
+        cursor: pointer;
+        font-size: 0.85rem;
+        user-select: none;
+
+        span {
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+
+    .badge:hover {
+        opacity: 0.9;
+    }
+
+    .badge:active {
+        span {
+            transform: scale(1.4);
+        }
+    }
+
+    .filtros {
+        overflow: auto;
+    }
+
+    .filtros::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    .filtros::-webkit-scrollbar-track {
+        border-radius: 2px;
+        background: rgba(var(--bs-dark-rgb), 0.7);
+    }
+
+    .filtros::-webkit-scrollbar-thumb {
+        background: rgba(var(--bs-secondary-rgb), 0.7);
+        /* Color del thumb */
+        border-radius: 2px;
+
+    }
+
+    .filtros::-webkit-scrollbar-thumb:hover {
+        background-color: var(--bs-secondary);
+    }
+}
+
+.lista {
+
+
+    .item {
+        background-color: var(--bs-dark);
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+        color: var(--bs-light);
+        border-radius: 0.50rem;
+        border: 1px solid var(--bs-light);
+
+        .icon {
+            width: 2rem;
+        }
+
+        :hover {
+            .boton {
+                transform: scale(1.1);
+            }
+        }
+
+        :active{
+            opacity: 0.9;
+        }
+
+        span {
+            font-size: 1.15rem;
+        }
+
+        .boton {
+            transition: transform 0.3s ease;
+            border: 2px solid var(--bs-light);
+            border-radius: 50%;
+        }
+
+        .header {
+            padding-bottom: 5px;
+
+            .estatus {
+                padding: 1px 6px;
+                border: 1px solid var(--bs-secondary);
+                border-radius: 8px;
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                .circle {
+                    border-radius: 50%;
+                    width: 0.70rem;
+                    height: 0.70rem;
+                }
+            }
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+}

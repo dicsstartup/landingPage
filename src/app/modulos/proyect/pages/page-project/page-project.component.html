@@ -1,0 +1,23 @@
+<div class="container-fluid px-3 d-flex flex-md-row flex-column justify-content-between align-items-center ">
+    <div class="d-flex flex-column  order-2 order-md-1 pt-2 w-md">
+        <h2 class="text-light">{{proyecto.name}}</h2>
+        <h6 class="text-secondary">{{proyectoInfo.sub_title}}</h6>
+        <p class="text-light">{{proyectoInfo.description}}</p>
+        <proyect-botonera></proyect-botonera>
+    </div>
+    <ngb-carousel class="p-1 p-md-4 order-1 order-md-2" #carousel [interval]="3000" [showNavigationArrows]="false" (slide)="onSlide($event)">
+        <ng-template ngbSlide *ngFor="let img of proyectoInfo.imgs; index as i">
+            <div class="picsum-img-wrapper">
+                <img [src]="img" alt="My image {{i + 1}} description" />
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+
+<div class="container-fluid px-3 tecnologias py-5">
+    <div  class="border-top border-bottom border-primary py-1">
+        <app-tecnologias></app-tecnologias>
+    </div>
+</div>
+
+<proyect-objetivos [objetivos]="proyectoInfo.objetivos" ></proyect-objetivos>
