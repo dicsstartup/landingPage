@@ -14,7 +14,7 @@ const routes: Routes = [
       { path: 'terms&conditions', component: TermsComponent },
       { path: 'politicaDePirivacidad', component: PoliticaPrivacidadComponent },
       { path: 'comoFunciona', component: HowWorkComponent },
-      { path: 'proyecto', loadChildren: () => import('./modulos/proyect/proyect.module').then(m => m.ProyectModule) }
+      { path: 'proyects', loadChildren: () => import('./modulos/proyect/proyect.module').then(m => m.ProyectModule) }
     ]
    }
 ];

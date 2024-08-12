@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FirebaseApp } from 'firebase/app';
-import { FirebaseStorage, getDownloadURL, getStorage, ref, StorageReference  } from "firebase/storage";
+import { FirebaseStorage, getDownloadURL, getStorage, listAll, ref, StorageReference } from "firebase/storage";
 import { FirebaseInitService } from '../firebase/firebase-init.service';
 
 
@@ -21,4 +21,20 @@ export class StoregeService {
     return getDownloadURL(pathRef);
   }
 
+
+  async getCarpetFiles(path: string): Promise<string[]> {
+    try {
+      const storage = getStorage();
+      const pathRef = ref(storage, path);
+      const results = await listAll(pathRef);
+      const filePromises = results.items.map((itemRef) => {
+        return getDownloadURL(itemRef).then((url) => {return url;});
+      });      
+      const fileData = await Promise.all(filePromises);
+      return fileData;
+    } catch (error) {
+      console.error('Error getting carpet files:', error);
+      return []; 
+    }
+  }
 }
