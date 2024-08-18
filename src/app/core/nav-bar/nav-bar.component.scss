@@ -6,12 +6,30 @@ img {
     width: 50px;
 }
 
+a {
+    text-decoration: none;
+}
 
 .btn {
     float: right;
-    font-family:  "Supreme-Regular",Roboto,"Helvetica Neue",;
+    font-family: "Supreme-Regular", Roboto, "Helvetica Neue", ;
+    padding: 0.25rem 0px;
 
     .material-symbols-outlined {
         font-size: 48px;
     }
+}
+
+
+.item {
+    border-radius: 0.25rem;
+   
+}
+.active {
+    background-color: #34373b7a;
+    opacity: 0.7;
+}
+
+.item:hover {
+    background-color: #34373b1e;
 }

@@ -10,13 +10,11 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HomePageComponent } from './home/home-page/home-page.component';
 import { LinkComponent } from './home/components/link/link.component';
 import { ViewProjectsComponent } from './home/components/view-projects/view-projects.component';
-import { TermsComponent } from './about/terms/terms.component';
-import { PoliticaPrivacidadComponent } from './about/politica-privacidad/politica-privacidad.component';
-import { HowWorkComponent } from './about/how-work/how-work.component';
 import { FullComponent } from './core/full/full.component';
 import { ProyectModule } from './modulos/proyect/proyect.module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './core/spinner/spinner.component';
+import { AboutModule } from './modulos/about/about.module';
 
 @NgModule({
   declarations: [
@@ -27,9 +25,6 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
     HomePageComponent,
     LinkComponent,
     ViewProjectsComponent,
-    TermsComponent,
-    PoliticaPrivacidadComponent,
-    HowWorkComponent,
     FullComponent,
     SpinnerComponent
   ],
@@ -40,7 +35,8 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
     NgbModule,
     NgbCarouselModule,
     SharedModule,
-    ProyectModule
+    ProyectModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
