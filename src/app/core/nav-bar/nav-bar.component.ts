@@ -9,6 +9,10 @@ import { OffcanvasDismissReasons ,NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap
 
 export class NavBarComponent {
 
+	list:{label:string, href:string}[]=[
+		{label:'Inicio',href:'home'},{label:'Como funciona',href:'comoFunciona'}
+	]
+
   @ViewChild('content') content!: TemplateRef<any>;
   closeResult = '';
 
