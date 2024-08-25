@@ -20,4 +20,13 @@
     </div>
 </div>
 
-<proyect-objetivos [objetivos]="proyectoInfo.objetivos" ></proyect-objetivos>
+<proyect-objetivos class="mb-2" [objetivos]="proyectoInfo.objetivos" ></proyect-objetivos>
+
+<ng-container *ngIf="proyectoInfo.funciones != undefined">
+    <ng-container *ngTemplateOutlet="funciones"></ng-container>
+  </ng-container>
+
+<ng-template #funciones>
+    <proyect-funciones  [funciones]="proyectoInfo.funciones"></proyect-funciones>
+</ng-template>
+  

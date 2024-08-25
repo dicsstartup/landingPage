@@ -22,7 +22,8 @@ export class PageProjectComponent implements OnInit {
 
   @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
 
-  constructor(private service: ProyectoService, private route: ActivatedRoute, private spinnerSvc: SpinnerService, public proyectoService: ProyectoSelectedService) {
+  constructor(private service: ProyectoService, private route: ActivatedRoute,
+     private spinnerSvc: SpinnerService, public proyectoService: ProyectoSelectedService) {
 
   }
 

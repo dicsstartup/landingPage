@@ -20,9 +20,11 @@ export interface ProyectInfo {
 
 export interface Funcion {
   title: string;
-  icon: string;
+  imagen: string;
   tipo: string;
-  puntos: { title: string, text: string }[];
+  subtitle?:string;
+  items?: { icon?: string, title: string, text: string }[];
+  message:string;
 }
 
 export interface Enlace {
