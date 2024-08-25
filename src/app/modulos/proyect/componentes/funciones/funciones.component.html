@@ -1,0 +1,49 @@
+<div class="bg-secondary">
+  <h2 class="text-dark text-center py-2">Funciones principales</h2>
+</div>
+<div *ngFor="let item of this.funciones">
+  <ng-container *ngIf="item.tipo === 'type1'; else type2Template; context: { item: item }">
+    <ng-container *ngTemplateOutlet="type1Template; context: { item: item }"></ng-container>
+  </ng-container>
+
+  <ng-template #type2Template>
+    <ng-container *ngIf="item.tipo === 'type2'; else type3Template">
+      <ng-container *ngTemplateOutlet="type2Template; context: { item: item }"></ng-container>
+    </ng-container>
+  </ng-template>
+</div>
+
+<ng-template #type1Template let-item="item">
+  <div class="container-fluid type1 py-sm-3 ">
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-4 col-xl-3 img d-flex flex-column justify-content-center">
+        <img class="w-100 h-auto" srcImage [appSrcInterceptor]="'/proyecto-info/0/funciones/'+item.imagen"
+          alt="My Image">
+      </div>
+      <div class="col-12 col-md-8 col-xl-6 d-flex flex-column justify-content-center">
+        <h5 class="border-bottom border-secondary">{{ item.title }}</h5>
+        <p class="message">{{item.message}}</p>
+        <div *ngIf="item.items">
+          <h6 class="text-secondary">{{item.subtitle}}</h6>
+          <ul>
+            <li *ngFor="let i of item.items">
+              <p><span class="text-secondary">{{i.title + ': ' }}</span>{{i.text}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #type2Template let-item="item">
+  <div class="type2">
+    Template for Type 2: {{ item.title }}
+  </div>
+</ng-template>
+
+<ng-template #type3Template let-item="item">
+  <div class="type3">
+    Template for Type 3: {{ item.title }}
+  </div>
+</ng-template>

@@ -9,6 +9,8 @@ import { BotoneraComponent } from './componentes/botonera/botonera.component';
 import { AllProyectsComponent } from './pages/all-proyects/all-proyects.component';
 import { FilterDialogComponent } from './componentes/filter-dialog/filter-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { FuncionesComponent } from './componentes/funciones/funciones.component';
+import { SrcImageDirective } from './directivas/src-image/src-image.directive';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     ObjetivosComponent,
     BotoneraComponent,
     AllProyectsComponent,
-    FilterDialogComponent
+    FilterDialogComponent,
+    FuncionesComponent,
+    SrcImageDirective
   ],
   imports: [
     CommonModule,
